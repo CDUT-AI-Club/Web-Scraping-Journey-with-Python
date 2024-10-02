@@ -1,0 +1,152 @@
+body {
+    font-family: 'Roboto', sans-serif; 
+    /* 设置字体为 "Roboto" ，如果不可用，则使用 sans-serif 作为后备 */
+    margin: 0;
+    /* 移除页面的默认外边距 */
+    padding: 0;
+    /* 移除页面的默认内边距 */
+    line-height: 1.6;
+    /* 设置行高 */
+    background-color: #eaeaea;
+    /* 将背景颜色设置为浅灰色 */
+    color: #333;
+    /* 将文本颜色设置为深灰色 */
+}
+
+header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    /* 设置背景为从 #667eea 到 #764ba2 的线性渐变，角度为 135 度 */
+    color: white;
+    /* 将文本颜色设置为白色 */
+    padding: 30px 0;
+    /* 上下内边距为 30 像素，左右内边距为 0 */
+    text-align: center;
+    /* 将文本水平居中对齐 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* 添加阴影效果，x 轴偏移为 0，y 轴偏移为 4 像素，模糊半径为 8 像素，颜色为半透明黑色 */
+    /* rgba(0, 0, 0, 0.2) 是一种颜色表示方法，使用红、绿、蓝和 alpha（透明度）通道定义颜色 */
+}
+
+nav {
+    background-color: #333;
+    /* 将导航栏的背景颜色设置为深灰色 */
+}
+
+nav ul {
+    /* nav ul被称为选择器，选择 <nav>元素内的无序列表 <ul> */
+    /* 选择器结构表示层级关系，确保样式只应用于特定的嵌套结构中的链接 */
+    list-style-type: none;
+    /* 移除列表项前面的默认项目符号 */
+    padding: 0;
+    /* 移除列表的默认内边距 */
+    margin: 0;
+    /* 移除列表的默认外边距 */
+    display: flex;
+    /* 将列表项设置为弹性布局，方便排列 */
+    justify-content: center;
+    /* 将列表项在容器中水平居中对齐 */
+}
+
+nav ul li {
+    margin: 0 20px;
+    /* 设置每个列表项的上下外边距为 0，左右外边距为 20 像素 */
+}
+
+nav ul li a {
+    color: white;
+    /* 将链接文本颜色设置为白色 */
+    text-decoration: none;
+    /* 移除链接的默认下划线 */
+    padding: 10px 20px;
+    /* 为链接增加内边距，上下 10 像素，左右 20 像素，使点击区域更大 */
+    transition: background-color 0.3s, transform 0.3s;
+    /* 添加过渡效果，使背景颜色和变换在 0.3 秒内平滑过渡 */
+    display: inline-block;
+    /* 将链接设置为行内块级元素，允许设置宽高和内边距 */
+    font-weight: bold;
+    /* 将字体设置为加粗 */
+}
+
+nav ul li a:hover {
+    /* 在 CSS 中，:hover 是一个伪类，用于选择用户鼠标悬停在元素上时的状态 */
+    background-color: #575757;
+    /* 将背景颜色更改为灰色 */
+    border-radius: 5px;
+    /* 为背景添加 5 像素的圆角 */
+    transform: scale(1.1);
+    /* 将链接放大到原始大小的 1.1 倍 */
+}
+
+/* 
+在 CSS 中，选择器特性（特异性）是用于确定应用哪些样式规则的优先级
+特异性由四个值组成，通常表示为 (a, b, c, d)，其中： 
+a：内联样式（如果有的话）
+b：ID 选择器的数量
+c：类选择器、属性选择器和伪类的数量
+d：元素和伪元素的数量
+
+对于 nav ul li a:hover，特性值是 (0, 1, 4)，具体解释如下： 
+b=0：没有 ID 选择器
+c=1：包含一个伪类 :hover
+d=4：有四个元素选择器：nav、ul、li、a 
+
+内联样式是直接在 HTML 元素的 style 属性中定义的样式，具有最高的优先级
+<div style="color: red; font-size: 20px;">这是一个有内联样式的文本</div>
+*/
+
+main {
+    padding: 60px 20px;
+    /* 上下内边距为 60 像素，左右内边距为 20 像素 */
+    max-width: 900px;
+    /* 设置最大宽度为 900 像素，防止内容过宽 */
+    margin: 40px auto;
+    /* 上下外边距为 40 像素，左右自动居中 */
+    background-color: #fff;
+    /* 背景颜色为白色 */
+    border-radius: 10px;
+    /* 边框圆角为 10 像素 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* 添加柔和的阴影效果 */
+}
+
+section {
+    margin-bottom: 40px;
+    /* 在 <section>元素的底部添加 40 像素的外边距 */
+}
+
+h2 {
+    color: #667eea;
+    /* 将文本颜色设置为浅蓝紫色 */
+    margin-bottom: 20px;
+    /* 在元素底部添加 20 像素的外边距 */
+    border-bottom: 2px solid #764ba2;
+    /* 在元素底部添加 2 像素的实线边框，颜色为深紫色 */
+    padding-bottom: 10px;
+    /* 在元素底部添加 10 像素的内边距 */
+}
+
+p {
+    font-size: 1.1em;
+    /* 将字体大小设置为 1.1 倍的默认大小 */
+    line-height: 1.8;
+    /* 设置行高为字体大小的 1.8 倍，增加行间距 */
+}
+
+footer {
+    background-color: #333;
+    /* 背景颜色为深灰色 */
+    color: white;
+    /* 文本颜色为白色 */
+    text-align: center;
+    /* 文本居中对齐 */
+    padding: 20px 0;
+    /* 上下内边距为 20 像素 */
+    position: fixed;
+    /* 固定定位，使页脚固定在窗口底部 */
+    width: 100%;
+    /* 宽度为 100%，占满屏幕宽度 */
+    bottom: 0;
+    /* 定位在窗口底部 */
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+    /* 添加顶部阴影效果 */
+}

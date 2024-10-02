@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 300px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+#counter {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#reset {
+    background-color: #f44336;
+}
+
+#reset:hover {
+    background-color: #e53935;
+}

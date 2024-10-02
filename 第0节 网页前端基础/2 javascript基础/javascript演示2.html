@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 70%;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px;
+            background-color: #f4f4f4;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        li.completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .delete {
+            background-color: #f44336;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Todo List</h1>
+    <input type="text" id="taskInput" placeholder="Add a new task...">
+    <!-- <input type="text">: 创建一个文本输入框，用户可以在其中输入文字 -->
+    <!-- id="taskInput": 为输入框设置唯一的ID，便于使用JavaScript进行操作和访问 -->
+    <!-- placeholder="Add a new task...": 设置占位符文本，当输入框为空时显示，提示用户可以输入的内容（例如，“Add a new task...”） -->
+    <button id="addButton">Add Task</button>
+    <ul id="taskList"></ul>
+
+    <script>
+        document.getElementById('addButton').addEventListener('click', function () {
+            // 为ID为addButton的按钮添加一个点击事件监听器。当按钮被点击时，执行函数中的代码
+
+            const taskInput = document.getElementById('taskInput');
+            // 获取ID为taskInput的输入框元素
+
+            const taskText = taskInput.value.trim();
+            // 获取输入框的值，并去除前后空格
+
+            if (taskText === '') return;
+            // 如果输入为空，则不执行后续代码
+
+            const taskList = document.getElementById('taskList');
+            // 获取ID为taskList的元素，通常是一个无序列表，用于显示任务
+
+            const listItem = document.createElement('li');
+            // 创建一个新的<li>元素
+            listItem.textContent = taskText;
+            // 将输入的任务文本设置为列表项的内容
+
+            const deleteButton = document.createElement('button');
+            // 创建一个新的<button>元素
+            deleteButton.textContent = 'Delete';
+            // 设置按钮的文本为“Delete”
+            deleteButton.className = 'delete';
+            // 为按钮添加一个类名delete
+            deleteButton.addEventListener('click', function () {
+                taskList.removeChild(listItem);
+            });
+            // 为删除按钮添加点击事件监听器，点击时从任务列表中移除该任务项
+
+            listItem.addEventListener('click', function () {
+                listItem.classList.toggle('completed');
+            });
+            // 为任务项添加点击事件监听器，点击时切换completed类名，用于标记任务完成
+
+            listItem.appendChild(deleteButton);
+            // 将删除按钮添加到任务项中
+            taskList.appendChild(listItem);
+            // 将任务项添加到任务列表中
+
+            taskInput.value = '';
+            // 重置输入框的值为空
+        });
+    </script>
+
+</body>
+
+</html>

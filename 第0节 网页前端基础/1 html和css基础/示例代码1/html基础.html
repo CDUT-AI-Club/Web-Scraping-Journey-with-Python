@@ -1,0 +1,72 @@
+<!DOCTYPE html> <!--html5-->
+<html lang="zh">
+<!--英语en 法语fr 德语de 西班牙语es 日语ja 韩语ko 俄语ru-->
+<!--
+简体中文（中国大陆）zh-CN
+繁体中文（台湾）zh-TW
+繁体中文（香港）zh-HK
+繁体中文（澳门）zh-MO
+繁体中文（新加坡）zh-SG
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- meta 是指 HTML 中的元数据标签，它提供有关 HTML 文档的元信息-->
+    <!-- charset="UTF-8" 是用于指定网页的字符编码-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- "viewport" 是一个预先定义的属性名，用于 <meta> 标签中，以控制网页在移动设备上的显示和缩放行为 -->
+    <!-- width=device-width 将视口宽度设置为设备的屏幕宽度，确保网页适应不同设备的屏幕尺寸 -->
+    <!-- initial-scale=1.0 设置初始缩放比例为 1.0，即页面在加载时不进行缩放 -->
+
+    <title>Document Title</title>
+    <!-- <title>用于指定网页的标题，这个标题会显示在浏览器的标签页上，也通常用于书签名称，它帮助用户识别和区分不同的网页 -->
+
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <!-- <link>标签用于在 HTML 文档中链接外部资源 -->
+    <!-- rel="stylesheet"：指定链接的关系为样式表 -->
+    <!-- href="styles.css"：指定样式表文件的路径。浏览器会加载这个文件并应用其中的样式到网页 -->
+    <!-- 
+    rel 是 relationship 的缩写，用于指定当前文档与链接资源之间的关系
+    href 是 hypertext reference 的缩写，用于指定链接资源的 URL 
+    -->
+</head>
+
+<body>
+<!-- <body>：网页的主体，包含所有可见内容 -->
+    <header>
+    <!-- <header>：头部区域，通常包含网站标志或标题 -->
+        <h1>Welcome to My Website</h1> 
+        <!-- <h1>：主标题 -->
+    </header>
+    <nav>
+    <!-- <nav>：navigation，导航区域，包含链接列表 -->
+        <ul>
+        <!-- <ul>：unordered list，无序列表 -->
+        <!-- <li>：list item，列表项，每项包含一个链接 -->
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://www.github.com">github</a></li>
+            <!-- <a> 标签代表 anchor，用于创建超链接 -->
+            <!-- href="#home" 指定链接的目标 -->
+            <!-- 在超链接中，# 号用于引用页面内的锚点或特定位置。它与元素的 id 属性配合使用。例如，href="#home" 会跳转到具有 id="home" 的元素 -->
+            <!-- href 属性也可以指向其他 HTML 文件的链接 -->
+            <!-- <a href="about.html">About Us</a> -->
+        </ul>
+    </nav>
+    <main>
+    <!-- <main>：主要内容区域 -->
+        <section>
+        <!-- <section>：内容分区 -->
+            <h2>About Us</h2>
+            <p>This is the about section of the website.</p>
+            <!-- <p>：段落文本 -->
+        </section>
+    </main>
+    <footer>
+    <!-- <footer>：底部区域，通常包含版权信息或联系信息 -->
+        <p>© 2024 My Website</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Demo</title>
+    <style>
+        #myButton {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="myButton">Click Me!</button>
+    <!-- <button>: 创建一个按钮元素 -->
+    <!-- id="myButton": 为按钮设置唯一的ID，便于使用JavaScript进行操作和访问 -->
+    <!-- Click Me!: 按钮上显示的文本，提示用户可以点击 -->
+
+    <script>
+        document.getElementById('myButton').addEventListener('click', function () {
+            alert('Button clicked!');
+        });
+    </script>
+    <!-- 
+    document.getElementById('myButton'): 选择网页中ID为myButton的元素。通常，这会是一个按钮元素
+    addEventListener('click', function() {...}): 为选中的元素添加一个事件监听器，监听click事件，当用户点击按钮时，触发后面的函数
+    function() { alert('Button clicked!'); }: 定义了一个匿名函数，当按钮被点击时执行。alert('Button clicked!');会弹出一个对话框，显示消息“Button clicked!”
+    -->
+
+</body>
+
+</html>
