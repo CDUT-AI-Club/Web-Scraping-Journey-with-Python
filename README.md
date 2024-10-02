@@ -41,3 +41,7 @@
 - 进一步掌握request库的用法
 - 学会使用JSON文件保存数据
 - 学会看懂官方文档
+### 第5节 使用selenium爬取动态内容
+- 进一步掌握os库的用法
+- 学会下载安装chrome和chromedriver
+- 了解使用selenium进行爬虫的流程
