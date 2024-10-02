@@ -111,6 +111,5 @@ HTTP 状态码有如下五类（部分）：
 #### 4、如何查看robots.txt
 - 打开浏览器。
 - 在地址栏输入网址：输入网站的主域名后加上 /robots.txt。
-例如，要查看 github.com/ 的 robots.txt，在地址栏输入 https://www.github.com/robots.txt。
-查看内容：
+例如，要查看 github.com/ 的 robots.txt，在地址栏输入 https://www.github.com/robots.txt 查看内容：
 - 你将看到该网站的 robots.txt 文件内容，其中包含爬虫的访问规则。
